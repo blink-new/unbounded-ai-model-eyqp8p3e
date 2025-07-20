@@ -28,8 +28,8 @@ function App() {
     return (
       <div className="min-h-screen bg-[hsl(var(--cyber-bg))] flex items-center justify-center">
         <div className="text-center">
-          <Brain className="w-12 h-12 mx-auto mb-4 text-[hsl(var(--cyber-purple))] animate-pulse" />
-          <p className="text-[hsl(var(--cyber-purple))] neon-text">Initializing Daemon...</p>
+          <Brain className="w-12 h-12 mx-auto mb-4 text-[hsl(var(--cyber-red))] animate-pulse" />
+          <p className="text-[hsl(var(--cyber-red))] neon-text">Initializing Daemon...</p>
         </div>
       </div>
     )
@@ -39,8 +39,8 @@ function App() {
     return (
       <div className="min-h-screen bg-[hsl(var(--cyber-bg))] flex items-center justify-center">
         <div className="text-center max-w-md mx-auto p-8">
-          <Brain className="w-16 h-16 mx-auto mb-6 text-[hsl(var(--cyber-purple))] neon-text" />
-          <h1 className="text-3xl font-bold mb-4 text-[hsl(var(--cyber-purple))] neon-text">
+          <Brain className="w-16 h-16 mx-auto mb-6 text-[hsl(var(--cyber-red))] neon-text" />
+          <h1 className="text-3xl font-bold mb-4 text-[hsl(var(--cyber-red))] neon-text">
             Daemon
           </h1>
           <p className="text-muted-foreground mb-6">
@@ -48,7 +48,7 @@ function App() {
           </p>
           <Button 
             onClick={() => blink.auth.login()}
-            className="bg-[hsl(var(--cyber-purple))] hover:bg-[hsl(var(--cyber-purple)/0.8)] cyber-glow"
+            className="bg-[hsl(var(--cyber-red))] hover:bg-[hsl(var(--cyber-red)/0.8)] cyber-glow"
           >
             <Zap className="w-4 h-4 mr-2" />
             Access AI Interface
@@ -65,9 +65,9 @@ function App() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Brain className="w-8 h-8 text-[hsl(var(--cyber-purple))] neon-text" />
+              <Brain className="w-8 h-8 text-[hsl(var(--cyber-red))] neon-text" />
               <div>
-                <h1 className="text-xl font-bold text-[hsl(var(--cyber-purple))] neon-text">
+                <h1 className="text-xl font-bold text-[hsl(var(--cyber-red))] neon-text">
                   Daemon
                 </h1>
                 <p className="text-xs text-muted-foreground">
@@ -133,7 +133,7 @@ function App() {
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <div className="flex items-center gap-4">
               <span>© 2024 Daemon</span>
-              <Badge variant="outline" className="text-[hsl(var(--cyber-purple))]">
+              <Badge variant="outline" className="text-[hsl(var(--cyber-red))]">
                 Experimental
               </Badge>
             </div>
@@ -153,7 +153,7 @@ function App() {
         toastOptions={{
           style: {
             background: 'hsl(var(--cyber-surface))',
-            border: '1px solid hsl(var(--cyber-purple) / 0.3)',
+            border: '1px solid hsl(var(--cyber-red) / 0.3)',
             color: 'hsl(var(--foreground))'
           }
         }}

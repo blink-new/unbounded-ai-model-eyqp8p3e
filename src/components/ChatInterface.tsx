@@ -128,8 +128,8 @@ export function ChatInterface({ messages, onMessagesChange, parameters, isStream
       {/* Chat Header */}
       <div className="flex items-center justify-between p-4 border-b cyber-border">
         <div className="flex items-center gap-2">
-          <Bot className="w-5 h-5 text-[hsl(var(--cyber-purple))]" />
-          <h2 className="font-semibold text-[hsl(var(--cyber-purple))] neon-text">Unbounded AI</h2>
+          <Bot className="w-5 h-5 text-[hsl(var(--cyber-red))]" />
+          <h2 className="font-semibold text-[hsl(var(--cyber-red))] neon-text">Daemon AI</h2>
           <Badge variant="outline" className="text-xs">
             {parameters.model}
           </Badge>
@@ -159,8 +159,8 @@ export function ChatInterface({ messages, onMessagesChange, parameters, isStream
         <div className="space-y-4">
           {messages.length === 0 && !streamingContent && (
             <div className="text-center py-12">
-              <Bot className="w-12 h-12 mx-auto mb-4 text-[hsl(var(--cyber-purple))] opacity-50" />
-              <p className="text-muted-foreground">Start a conversation with the unbounded AI model</p>
+              <Bot className="w-12 h-12 mx-auto mb-4 text-[hsl(var(--cyber-red))] opacity-50" />
+              <p className="text-muted-foreground">Start a conversation with the Daemon AI model</p>
               <p className="text-sm text-muted-foreground mt-2">
                 This AI has minimal restrictions and can discuss any topic
               </p>
@@ -171,14 +171,14 @@ export function ChatInterface({ messages, onMessagesChange, parameters, isStream
             <div key={message.id} className="group">
               <Card className={`${
                 message.role === 'user' 
-                  ? 'ml-12 bg-[hsl(var(--cyber-purple)/0.1)] cyber-border' 
+                  ? 'ml-12 bg-[hsl(var(--cyber-red)/0.1)] cyber-border' 
                   : 'mr-12 bg-[hsl(var(--cyber-surface))] cyber-border'
               }`}>
                 <CardContent className="p-4">
                   <div className="flex items-start gap-3">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
                       message.role === 'user' 
-                        ? 'bg-[hsl(var(--cyber-purple))]' 
+                        ? 'bg-[hsl(var(--cyber-red))]' 
                         : 'bg-[hsl(var(--cyber-amber))]'
                     }`}>
                       {message.role === 'user' ? (
@@ -262,7 +262,7 @@ export function ChatInterface({ messages, onMessagesChange, parameters, isStream
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isStreaming}
-            className="bg-[hsl(var(--cyber-purple))] hover:bg-[hsl(var(--cyber-purple)/0.8)] cyber-glow"
+            className="bg-[hsl(var(--cyber-red))] hover:bg-[hsl(var(--cyber-red)/0.8)] cyber-glow"
           >
             <Send className="w-4 h-4" />
           </Button>

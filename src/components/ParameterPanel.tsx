@@ -41,7 +41,7 @@ export function ParameterPanel({ parameters, onParametersChange, isStreaming }: 
   return (
     <Card className="cyber-border bg-black/20 backdrop-blur-sm">
       <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-[hsl(var(--cyber-purple))] neon-text">
+        <CardTitle className="flex items-center gap-2 text-[hsl(var(--cyber-red))] neon-text">
           <Settings className="w-5 h-5" />
           AI Parameters
         </CardTitle>
@@ -56,7 +56,7 @@ export function ParameterPanel({ parameters, onParametersChange, isStreaming }: 
             </SelectTrigger>
             <SelectContent className="bg-black/90 cyber-border">
               {AVAILABLE_MODELS.map((model) => (
-                <SelectItem key={model.id} value={model.id} className="hover:bg-[hsl(var(--cyber-purple)/0.2)]">
+                <SelectItem key={model.id} value={model.id} className="hover:bg-[hsl(var(--cyber-red)/0.2)]">
                   <div className="flex flex-col">
                     <span className="font-medium">{model.name}</span>
                     <span className="text-xs text-muted-foreground">{model.description}</span>
@@ -118,7 +118,7 @@ export function ParameterPanel({ parameters, onParametersChange, isStreaming }: 
         {/* Advanced Parameters */}
         <Collapsible open={isAdvancedOpen} onOpenChange={setIsAdvancedOpen}>
           <CollapsibleTrigger asChild>
-            <Button variant="ghost" className="w-full justify-between p-2 h-auto text-[hsl(var(--cyber-purple))]">
+            <Button variant="ghost" className="w-full justify-between p-2 h-auto text-[hsl(var(--cyber-red))]">
               <span className="flex items-center gap-2">
                 <Brain className="w-4 h-4" />
                 Advanced Parameters
@@ -202,7 +202,7 @@ export function ParameterPanel({ parameters, onParametersChange, isStreaming }: 
         <Button 
           onClick={resetToDefaults} 
           variant="outline" 
-          className="w-full cyber-border hover:bg-[hsl(var(--cyber-purple)/0.1)]"
+          className="w-full cyber-border hover:bg-[hsl(var(--cyber-red)/0.1)]"
           disabled={isStreaming}
         >
           Reset to Defaults
